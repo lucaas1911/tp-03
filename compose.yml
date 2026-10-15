@@ -1,0 +1,15 @@
+# Serveur PHP du TP.
+# A laisser dans le MEME dossier que vos fichiers .php.
+#
+# Demarrer : ouvrir un terminal dans ce dossier, puis taper :
+#     docker compose up -d
+# Ouvrir dans le navigateur :  http://localhost:8181
+# Arreter (a la fin) :
+#     docker compose down
+services:
+  php:
+    image: php:8.3-apache
+    ports:
+      - "8181:80"
+    volumes:
+      - .:/var/www/html
